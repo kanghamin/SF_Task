@@ -14,6 +14,7 @@ function Home() {
     setPage(page + 1);
   };
 
+  // Get brief exchanges information from CoinGecko
   useEffect(() => {
     fetch(
       `https://api.coingecko.com/api/v3/exchanges?per_page=10&page=${page}`,
@@ -31,11 +32,10 @@ function Home() {
   }, [page]);
 
   return (
-
     <div className="self-center">
       <Title title="Exchange Directory" />
-      <table className="table-auto mb-4">
-        <thead>
+      <table className="exchange_table table-auto mb-4">
+        <thead className="exchange_table_head">
           <tr>
             <th>Logo</th>
             <th>Name</th>
@@ -44,7 +44,7 @@ function Home() {
             <th>Link</th>
           </tr>
         </thead>
-        <tbody className="text-center">
+        <tbody className="exchange_table_body text-center">
           {exchanges.map((exchange) => (
             <Table
               key={exchange.name}
@@ -58,10 +58,10 @@ function Home() {
           ))}
         </tbody>
       </table>
-      {page > 1 ? <button className="text-xl mr-4 hover:bg-violet-100" onClick={previousPage} type="button">Previous</button> : null}
-      <button className="text-xl hover:bg-violet-100" onClick={nextPage} type="button">Next</button>
+      {/* Shows the previous button from the second page */}
+      {page > 1 ? <button className="previous_button text-xl mr-4 hover:bg-violet-100" onClick={previousPage} type="button">Previous</button> : null}
+      <button className="next_button text-xl hover:bg-violet-100" onClick={nextPage} type="button">Next</button>
     </div>
-
   );
 }
 

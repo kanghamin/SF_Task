@@ -5,6 +5,8 @@ function Table({
   id, logo, name, trustRank, country, link,
 }) {
   const navigate = useNavigate();
+
+  // Create a router according to the ID value of the exchange
   const handleOnClick = useCallback(
     () => navigate(`/exchanges/${id}`, { state: id }, { replace: true }),
     [id, navigate],
