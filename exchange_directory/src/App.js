@@ -1,33 +1,23 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import ExchangeDetails from "./ExchangeDetails";
 import './App.css';
 
 function App() {
-  const [page, setPage] = useState(1);
-  const [exchanges, setExchanges] = useState([]);
-
-  // const loadMorePage = () => {
-  //   setPage(page + 1);
-  // }
-
-  useEffect(() => {
-    fetch(
-      `https://api.coingecko.com/api/v3/exchanges?per_page=10&page=${page}`,
-      {
-        method: "GET",
-        headers: new Headers({
-          Accept: "application/json"
-        })
-      }
-    )
-    .then(res => res.json())
-    .then(response => {
-      setExchanges(response)
-    })
-  }, [page]);
  
   return (
-    <div className="App">
+    <BrowserRouter>
+    <div>
+      <Routes>
+        <Route exact path="/" element={Home} />
+        <Route
+          exact
+          path="/exchanges/:id"
+          element={ExchangeDetails}
+        />
+      </Routes>
     </div>
+  </BrowserRouter>
   );
 }
 
