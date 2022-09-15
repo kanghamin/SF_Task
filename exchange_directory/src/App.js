@@ -9,11 +9,10 @@ function App() {
     <BrowserRouter>
     <div>
       <Routes>
-        <Route exact path="/" element={Home} />
+        <Route exact path="/" element={ <Home /> } />
         <Route
-          exact
           path="/exchanges/:id"
-          element={ExchangeDetails}
+          element={ <ExchangeDetails /> }
         />
       </Routes>
     </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
+import Table from './Table';
 
 const Home = () => {
   const [page, setPage] = useState(1);
@@ -22,14 +22,36 @@ const Home = () => {
     .then(res => res.json())
     .then(response => {
       setExchanges(response)
-    })
-  }, [page]);
+      console.log(response)
+    })  }, [page]);
 
 
   return (
-   <div>
-
-   </div>
+    <table className="table-auto">
+        <thead>
+          <tr>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Trust Rank</th>
+            <th>Country</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            exchanges.map((exchange, key) => 
+              <Table 
+                key={key}  
+                id={exchange.id}
+                logo={exchange.image}
+                name={exchange.name}
+                trustRank={exchange.trust_score_rank}
+                country={exchange.country}
+                link={exchange.url}
+              />
+          )}
+        </tbody>
+    </table>
   )
 }
 
