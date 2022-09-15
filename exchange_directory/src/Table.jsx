@@ -16,7 +16,7 @@ function Table({
       <td>{name}</td>
       <td>{trustRank}</td>
       <td>{country || 'Unknown'}</td>
-      <td><a href={link} className="hover:bg-violet-100">{link}</a></td>
+      <td><a className="hover:bg-violet-100" href={link} target="_blank" rel="noreferrer">{link}</a></td>
     </tr>
   );
 }
