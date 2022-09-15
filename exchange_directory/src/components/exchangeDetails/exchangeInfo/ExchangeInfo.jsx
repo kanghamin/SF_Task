@@ -4,6 +4,19 @@ import {
 } from 'react-icons/fa';
 import ExchangeLink from './exchangeLink/ExchangeLink';
 
+/**
+ * This is the property value of the detailed information of the exchange
+ *
+ * @property {string} infoTitle - the title value of the information
+ * @property {string} infoDesc - The description value of the information
+ * @property {string} twitter - the twitter url of the exchange
+ * @property {string} telegram - the telegram url of the exchange
+ * @property {string} facebook - the facebook url of the exchange
+ * @property {string} reddit - the reddit url of the exchange
+ * @property {string} slack - the slack url of the exchange
+ * @property {string} otherOne - the otherOne url of the exchange
+ * @property {string} otherTwo - the otherTwo url of the exchange
+ */
 function ExchangeInfo({
   infoTitle, infoDesc, twitter, telegram, facebook, reddit, slack, otherOne, otherTwo,
 }) {

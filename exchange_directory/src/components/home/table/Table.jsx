@@ -1,6 +1,16 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * This is a property that goes into the table
+ *
+ * @property {string} id - the ID value of the exchange
+ * @property {string} logo - the logo image url of the exchange
+ * @property {string} name - the name of the exchange
+ * @property {string} trustRank - the trust ranking ranking of the exchange
+ * @property {string} country - the country where the exchange is located
+ * @property {string} link - the url of the exchange
+ */
 function Table({
   id, logo, name, trustRank, country, link,
 }) {
