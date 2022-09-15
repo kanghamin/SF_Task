@@ -11,12 +11,12 @@ function Table({
   );
 
   return (
-    <tr onClick={handleOnClick}>
-      <td>{logo}</td>
+    <tr className="cursor-pointer border-2 border-solid border-gray-100" onClick={handleOnClick}>
+      <td><img className="w-12 h-12" src={logo} alt={name} /></td>
       <td>{name}</td>
       <td>{trustRank}</td>
-      <td>{country}</td>
-      <td>{link}</td>
+      <td>{country || 'Unknown'}</td>
+      <td><a href={link} className="hover:bg-violet-100">{link}</a></td>
     </tr>
   );
 }
