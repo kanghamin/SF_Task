@@ -16,6 +16,10 @@ npm install
 npm start
 ```
 
+## Components Design
+
+![components design](component_design.png)
+
 ## Components Directory
 ```
 src
