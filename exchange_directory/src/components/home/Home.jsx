@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Table from './Table';
-import Title from './Title';
+import Table from './table/Table';
+import Title from '../share/Title';
 
 function Home() {
   const [page, setPage] = useState(1);

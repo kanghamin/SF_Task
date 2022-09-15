@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home';
-import ExchangeDetails from './ExchangeDetails';
+import Home from './components/home/Home';
+import ExchangeDetails from './components/exchangeDetails/ExchangeDetails';
 
 function App() {
   return (

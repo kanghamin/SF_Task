@@ -2,7 +2,7 @@ import React from 'react';
 import {
   FaTwitter, FaTelegram, FaFacebook, FaReddit, FaSlack, FaLink,
 } from 'react-icons/fa';
-import ExchangeLink from './ExchangeLink';
+import ExchangeLink from './exchangeLink/ExchangeLink';
 
 function ExchangeInfo({
   infoTitle, infoDesc, twitter, telegram, facebook, reddit, slack, otherOne, otherTwo,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import Title from './Title';
-import ExchangeInfo from './ExchangeInfo';
+import Title from '../share/Title';
+import ExchangeInfo from './exchangeInfo/ExchangeInfo';
 
 function ExchangeDetails() {
   const [exchangeInfo, setExchangeInfo] = useState([]);
