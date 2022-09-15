@@ -8,7 +8,7 @@ function App() {
       <div className="h-[100vh] p-5 overflow-y-auto xl:flex xl:items-center xl:justify-center">
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/exchanges/:id" element={<ExchangeDetails />} />
+          <Route exact path="/exchanges/:id" element={<ExchangeDetails />} />
         </Routes>
       </div>
     </BrowserRouter>

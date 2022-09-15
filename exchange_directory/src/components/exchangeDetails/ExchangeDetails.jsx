@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useParams } from 'react-router-dom';
 import Title from '../share/Title';
 import ExchangeInfo from './exchangeInfo/ExchangeInfo';
 
@@ -7,10 +7,11 @@ function ExchangeDetails() {
   const [exchangeInfo, setExchangeInfo] = useState([]);
 
   const location = useLocation();
+  const { id } = useParams();
 
   // Get detailed information about the exchange using the exchange's ID value
   useEffect(() => {
-    fetch(`https://api.coingecko.com/api/v3/exchanges/${location.state}`, {
+    fetch(`https://api.coingecko.com/api/v3/exchanges/${location.state || id}`, {
       method: 'GET',
       headers: new Headers({
         Accept: 'application/json',
@@ -25,7 +26,7 @@ function ExchangeDetails() {
   return (
     <div>
       <Title title={`Exchange Detail-${exchangeInfo.name}`} />
-      <Link to="/">
+      <Link className="exchange_detail_back" to="/">
         ⬅ Back
       </Link>
       <div className="exchange_detail flex flex-col xl:flex-row">
