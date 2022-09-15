@@ -6,7 +6,7 @@ function ExchangeLink({ svg, link }) {
       <span className="xl:mr-3.5">
         {svg}
       </span>
-      <a className="hover:bg-violet-100" href={link.props.children} target="_blank" rel="noreferrer">{link.props.children}</a>
+      <a className="hover:bg-violet-100" href={link} target="_blank" rel="noreferrer">{link}</a>
     </div>
   );
 }

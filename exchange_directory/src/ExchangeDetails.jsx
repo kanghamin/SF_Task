@@ -57,15 +57,13 @@ function ExchangeDetails() {
           </div>
           <ExchangeInfo
             infoTitle="Link"
-            twitter={exchangeInfo.twitter_handle ? (
-              <p>{`https://twitter.com/${exchangeInfo.twitter_handle}`}</p>
-            ) : null}
-            telegram={exchangeInfo.telegram_url ? <p>{exchangeInfo.telegram_url}</p> : null}
-            facebook={exchangeInfo.facebook_url ? <p>{exchangeInfo.facebook_url}</p> : null}
-            reddit={exchangeInfo.reddit_url ? <p>{exchangeInfo.reddit_url}</p> : null}
-            slack={exchangeInfo.slack_url ? <p>{exchangeInfo.slack_url}</p> : null}
-            otherOne={exchangeInfo.other_url_1 ? <p>{exchangeInfo.other_url_1}</p> : null}
-            otherTwo={exchangeInfo.other_url_2 ? <p>{exchangeInfo.other_url_2}</p> : null}
+            twitter={`https://twitter.com/${exchangeInfo.twitter_handle}`}
+            telegram={exchangeInfo.telegram_url}
+            facebook={exchangeInfo.facebook_url}
+            reddit={exchangeInfo.reddit_url}
+            slack={exchangeInfo.slack_url}
+            otherOne={exchangeInfo.other_url_1}
+            otherTwo={exchangeInfo.other_url_2}
           />
         </div>
       </div>
