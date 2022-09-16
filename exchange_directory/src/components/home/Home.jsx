@@ -34,30 +34,32 @@ function Home() {
   return (
     <div className="self-center">
       <Title title="Exchange Directory" />
-      <table className="exchange_table table-auto mb-4">
-        <thead className="exchange_table_head">
-          <tr>
-            <th>Logo</th>
-            <th>Name</th>
-            <th>Trust Rank</th>
-            <th>Country</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody className="exchange_table_body text-center">
-          {exchanges.map((exchange) => (
-            <Table
-              key={exchange.name}
-              id={exchange.id}
-              logo={exchange.image}
-              name={exchange.name}
-              trustRank={exchange.trust_score_rank}
-              country={exchange.country}
-              link={exchange.url}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="exchange_table">
+        <table className="exchange_table_table table-auto mb-4">
+          <thead className="exchange_table_head">
+            <tr>
+              <th>Logo</th>
+              <th>Name</th>
+              <th>Trust Rank</th>
+              <th>Country</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody className="exchange_table_body text-center">
+            {exchanges.map((exchange) => (
+              <Table
+                key={exchange.name}
+                id={exchange.id}
+                logo={exchange.image}
+                name={exchange.name}
+                trustRank={exchange.trust_score_rank}
+                country={exchange.country}
+                link={exchange.url}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
       {/* Shows the previous button from the second page */}
       {page > 1 ? <button className="previous_button text-xl mr-4 hover:bg-violet-100" onClick={previousPage} type="button">Previous</button> : null}
       <button className="next_button text-xl hover:bg-violet-100" onClick={nextPage} type="button">Next</button>
